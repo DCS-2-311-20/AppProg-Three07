@@ -87,7 +87,7 @@ function init() {
 
   // ブロック
   const bricks = new THREE.Group();
-  let nblick = 0;
+  let nbrick = 0;
   // ブロックの生成
   {
     const color = ["white", "red", "yellow", "blue", "purple", "green" ];
@@ -100,13 +100,13 @@ function init() {
           (param.w+param.gapX)*(c-(param.nCol-1)/2),
           0, -(param.d+param.gapZ)*r);
         bricks.add(brick);
-        nblick++;
+        nbrick++;
       }
     }
     bricks.position.z = -3.5;
   }
   // ブロックの再表示
-  function resetBlick() {
+  function resetBrick() {
   }
 
   // ボール
