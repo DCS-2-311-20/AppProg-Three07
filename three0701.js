@@ -165,7 +165,7 @@ function init() {
   }
 
   // ブロックの衝突検出
-  function blickCheck(sphere) {
+  function bickCheck(sphere) {
   }
 
   // 描画更新
