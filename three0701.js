@@ -14,7 +14,7 @@ function init() {
   const controls = {
     VirticalCamera: true,
   };
-  const lifeMark = "🟢";
+  const lifeMark = "◯";
 
   // シーン作成
   const scene = new THREE.Scene();
