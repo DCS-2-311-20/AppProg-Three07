@@ -1,12 +1,8 @@
 //
-// 応用プログラミング 課題10 (three0701.js)
+// 応用プログラミング 課題8 G084002020 拓殖太郎 (three0701.js)
 // $Id$
 //
 "use strict"; // 厳格モード
-
-// ライブラリをモジュールとして読み込む
-import * as THREE from "./js/three.module.js";
-import * as dat from "./js/dat.gui.module.js";
 
 // ３Ｄページ作成関数の定義
 function init() {
@@ -91,22 +87,33 @@ function init() {
   // ブロックの生成
   {
     const color = ["white", "red", "yellow", "blue", "purple", "green" ];
-    const param = {w:1.2, h:0.8, d:0.4, nRow:6, nCol:9, gapX:0.1, gapZ:0.3};
+    const param = {
+      w:1.2, // ブロックの幅
+      h:0.8, // ブロックの高さ
+      d:0.4, // ブロックの奥行き
+      nRow:6, // ブロックの行数
+      nCol:9, // ブロックの列数
+      gapX:0.1, // 横方向のすき間
+      gapZ:0.3}; // 縦方向のすき間
     for ( let r = 0; r < param.nRow; r += 1 ) {
       for ( let c = 0; c < param.nCol; c += 1 ) {
         const brick = new THREE.Mesh(
+
         );
         brick.position.set(
-          (param.w+param.gapX)*(c-(param.nCol-1)/2),
-          0, -(param.d+param.gapZ)*r);
+          (param.w + param.gapX) * (c - (param.nCol - 1) / 2),
+          0,
+          -(param.d + param.gapZ) * r
+        );
         bricks.add(brick);
         nbrick++;
       }
     }
-    bricks.position.z = -3.5;
+    bricks.position.z = -3.5; // ブロック全体を後ろに下げる
   }
   // ブロックの再表示
   function resetBrick() {
+
   }
 
   // ボール
@@ -139,7 +146,6 @@ function init() {
   // パドル操作
 
   // スコアボードの作成
-
 
   // スコアボードの更新
   function updateScore() {
