@@ -167,11 +167,11 @@ function init() {
   }
 
   // パドルの衝突検出
-  function paddleCheck(sphere, delta) {
+  function paddleCheck() {
   }
 
   // ブロックの衝突検出
-  function bickCheck(sphere) {
+  function bickCheck() {
   }
 
   // 描画更新
